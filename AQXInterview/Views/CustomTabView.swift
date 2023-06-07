@@ -33,6 +33,9 @@ struct CustomTabView: View {
                 RecentTradesView(viewModel: vm)
             }
         }
+        .onDisappear {
+            webSocket.disconnect()
+        }
     }
 }
 
